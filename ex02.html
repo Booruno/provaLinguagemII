@@ -3,9 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Exercício 02</title>
 </head>
 <body>
+   
+        <div>
+            <label for="fNumber">Primeiro número:</label>
+            <input type="number" id="fNumber">
+        </div>
+        
+        <div>
+            <label for="sNumber">Segundo número:</label>
+            <input type="number" id="sNumber">
+        </div>
+        
+        <div>
+            <label for="tNumber">Terceiro número:</label>
+            <input type="number" id="tNumber">
+        </div>
+
+        <div>
+            <button onclick="media()">Calcular</button>
+        </div>
+
+        <div id="resultado">
+
+        </div>    
+<script>
     
+
+    function media(){
+   
+    var numeroUm = +document.getElementById('fNumber').value;
+    var numeroDois = +document.getElementById('sNumber').value;
+    var numeroTres = +document.getElementById('tNumber').value;
+    
+    var resultado = document.getElementById('resultado');
+        resultado.value = (numeroUm + numeroDois + numeroTres) /3;
+
+        resultado.innerHTML = `Media: ${resultado.value}`
+    }
+  
+
+
+
+</script>
 </body>
+
+
+
 </html>

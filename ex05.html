@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 05</title>
+</head>
+<body>
+
+
+    <h1>Cadastro</h1>
+    <form id="cadastro" method="post" onsubmit="return validar(this)">
+        <div>Nome: 
+            <input type="text" name="nome" placeholder="Nome Completo" onkeydown="return /[a-z, ]/i.test(event.key)" />
+        </div>
+
+        <div>Idade: 
+            <input type="number" name="idade" placeholder="Idade(somente números)" />
+        </div>
+
+        <div>E-mail: 
+            <input type="email" name="email" placeholder="exemplo@exemplo.com" />
+        </div>
+
+        <div>Senha: 
+            <input type="password" name="senha" placeholder="Mín. 8 caracteres"  minlength="8" />
+        </div>
+
+        <div>
+            <input type="submit" name="enviar" id="enviar" value="ENVIAR" onsubmit="validar()">
+        </div>
+
+    </form>
+
+    <div id="erros">
+
+    </div>
+
+
+
+    <script>
+        function validar(frm){
+
+            if(frm.nome.value == "" || frm.nome.value == null && frm.idade.value == "" || frm.idade.value == null && frm.email.value == "" || frm.email.value == null &&
+            frm.senha.value == "" || frm.senha.value == null){
+               
+                var erro = document.createElement("p");
+                erro.innerHTML ='Erro ao cadastrar pessoa.!';
+                document.getElementById("erros").appendChild(erro);
+
+
+
+
+            }
+            else{
+                var acerto = document.createElement("p");
+                acerto.innerHTML ='Pessoa cadastrada com sucesso!';
+                document.getElementById("erros").appendChild(acerto);
+            }
+
+        }
+
+
+    </script>
+
+</body>
+</html>

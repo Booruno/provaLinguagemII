@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-bt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 04</title>
+</head>
+<body>
+  
+    <h1>Gerenciador de Atividades</h1>
+
+    <input type="text" id="add" placeholder="Inserir nova atividade">
+    <input type="button" id="adicionar" onclick="acrescentar()" value="Adicionar">
+
+  <div id="atividades">
+
+  </div>
+
+
+  <script>
+      
+      function acrescentar(){
+      var novoParagrafo = document.createElement("p");
+      novoParagrafo.innerHTML = `${add.value}`;
+      document.getElementById("atividades").appendChild(novoParagrafo);
+    }
+
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 03</title>
+</head>
+<body>
+    <h1>Gerar número aleatório</h1>    
+        <input type="button" value="Gerar" id="Gerar" onclick="gerarnumero()">
+
+    <div id="numeroUm"></div>
+    <div id="numeroDois"></div>
+    <div id="numeroTres"></div>
+    <div id="numeroQuatro"></div>
+    <div id="numeroCinco"></div>
+    <div id="numeroSeis"></div>
+
+
+<script>
+
+    function gerarnumero(){
+            var nUm = Math.floor(Math.random()*60);
+            var resultNUm = document.getElementById('numeroUm');
+            resultNUm.value = nUm;
+            resultNUm.innerHTML = `Primeiro: ${resultNUm.value}`
+
+            var nDois = Math.floor(Math.random()*60);
+            if( nDois != nUm){
+                var resultNDois = document.getElementById('numeroDois');
+                resultNDois.value = nDois;
+                resultNDois.innerHTML = `Segundo: ${resultNDois.value}`
+             }
+           
+             var nTres = Math.floor(Math.random()*60);
+            
+             if( nTres != nDois && nTres != nUm){
+                var resultNTres = document.getElementById('numeroTres');
+                resultNTres.value = nTres;
+                resultNTres.innerHTML = `Terceiro: ${resultNTres.value}`
+             }
+                          
+             var nQuatro = Math.floor(Math.random()*60);
+
+             if(nQuatro != nTres &&  nQuatro != nDois && nQuatro != nUm){
+                var resultNQuatro = document.getElementById('numeroQuatro');
+                resultNQuatro.value = nQuatro;
+                resultNQuatro.innerHTML = `Quarto: ${resultNQuatro.value}`
+             }
+             
+             var nCinco = Math.floor(Math.random()*60);
+
+             if(nCinco != nQuatro && nCinco != nTres &&  nCinco != nDois && nCinco != nUm){
+                var resultNCinco = document.getElementById('numeroCinco');
+                resultNCinco.value = nCinco;
+                resultNCinco.innerHTML = `Quinto: ${resultNCinco.value}`
+             }
+
+             var nSeis = Math.floor(Math.random()*60);
+
+             if(nSeis != nCinco &&  nSeis != nQuatro && nSeis != nTres &&  nSeis != nDois && nSeis != nUm){
+                var resultNSeis = document.getElementById('numeroSeis');
+                resultNSeis.value = nSeis;
+                resultNSeis.innerHTML = `Sexto: ${resultNSeis.value}`
+             }
+    }
+
+
+</script>
+
+
+</body>
+</html>
