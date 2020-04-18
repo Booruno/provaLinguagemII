@@ -4,11 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Exercício 05</title>
+    <link rel="stylesheet" href="estilo.css">
 </head>
 <body>
 
-
-    <h1>Cadastro</h1>
+<main>
+    <h1 id="hCadastro">Cadastro</h1>
+    
     <form id="cadastro" method="post" onsubmit="return validar(this)">
         <div>Nome: 
             <input type="text" name="nome" placeholder="Nome Completo" onkeydown="return /[a-z, ]/i.test(event.key)" />
@@ -32,9 +34,14 @@
 
     </form>
 
-    <div id="erros">
+    <div id="erro">
 
     </div>
+
+    <div id="acerto">
+
+    </div>
+</main>
 
 
 
@@ -46,7 +53,7 @@
                
                 var erro = document.createElement("p");
                 erro.innerHTML ='Erro ao cadastrar pessoa.!';
-                document.getElementById("erros").appendChild(erro);
+                document.getElementById("erro").appendChild(erro);
 
 
 
@@ -55,7 +62,7 @@
             else{
                 var acerto = document.createElement("p");
                 acerto.innerHTML ='Pessoa cadastrada com sucesso!';
-                document.getElementById("erros").appendChild(acerto);
+                document.getElementById("acerto").appendChild(acerto);
             }
 
         }

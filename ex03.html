@@ -4,17 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Exercício 03</title>
+    <link rel="stylesheet" href="estilo.css">
 </head>
 <body>
-    <h1>Gerar número aleatório</h1>    
-        <input type="button" value="Gerar" id="Gerar" onclick="gerarnumero()">
-
-    <div id="numeroUm"></div>
-    <div id="numeroDois"></div>
-    <div id="numeroTres"></div>
-    <div id="numeroQuatro"></div>
-    <div id="numeroCinco"></div>
-    <div id="numeroSeis"></div>
+    
+    <main>
+        
+        <h1 id="gerarNumero">Gerar número aleatório</h1>    
+        
+        <div id="gerar">
+            <button id="gerar" onclick="gerarnumero()">Gerar</button>
+        </div>
+     
+       <div class="entradas">
+        <div id="numeroUm"></div>
+        <div id="numeroDois"></div>
+        <div id="numeroTres"></div>
+        <div id="numeroQuatro"></div>
+        <div id="numeroCinco"></div>
+        <div id="numeroSeis"></div>
+    </div>
+    
+    </main>
 
 
 <script>
